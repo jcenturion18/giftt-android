@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="settings">Einstellungen</string>
+    <string name="language">Sprache</string>
+    <string name="add_user">Nutzer hinzufügen</string>
+    <string name="last_user">Letzter benutzer:</string>
+    <string name="finished">Fertig</string>
+    <string name="enter_name">Name eingeben</string>
+    <string name="name">Name</string>
+    <string name="submit">Einreichen</string>
+    <string name="cancel">Abbrechen</string>
+</resources>
