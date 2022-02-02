@@ -5,4 +5,8 @@
     <string name="add_user">Add user</string>
     <string name="last_user">Last user:</string>
     <string name="finished">Finished</string>
+    <string name="enter_name">Enter name</string>
+    <string name="name">Name</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
 </resources>
