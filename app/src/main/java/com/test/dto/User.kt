@@ -1,8 +1,7 @@
 /**
-* Created by Julian Centurion on 02/02/2022.
-*/
+ * Created by Julian Centurion on 02/02/2022.
+ */
 
 package com.test.dto
 
-class User {
-}
+data class User(val name: String? = null)
