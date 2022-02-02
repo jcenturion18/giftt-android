@@ -9,6 +9,7 @@ import com.test.database.DataBaseInterface
 import com.test.database.DatabaseImp
 import com.test.databinding.ActivityMainBinding
 import com.test.dto.User
+import java.util.Locale
 
 class MainActivity(
     private val db: DataBaseInterface = DatabaseImp()
@@ -21,6 +22,7 @@ class MainActivity(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
         setTextListener()
@@ -28,7 +30,10 @@ class MainActivity(
     }
 
     private fun setTextListener() {
-        binding.language.setOnClickListener { }
+        binding.language.setOnClickListener {
+            setLocale()
+            recreate()
+        }
 
         binding.addUser.setOnClickListener {
             showDialog()
@@ -62,5 +67,15 @@ class MainActivity(
         }
 
         builder.show()
+    }
+
+    private fun setLocale() {
+        val config = resources.configuration
+        val lang = "de"
+        val locale = Locale(lang)
+        Locale.setDefault(locale)
+        config.setLocale(locale)
+        createConfigurationContext(config)
+        resources.updateConfiguration(config, resources.displayMetrics)
     }
 }
